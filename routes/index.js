@@ -1,33 +1,16 @@
 import express from 'express';
+import { index, destinations, aboutUs, opinions, contact } from '../controllers/pageController.js';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.render('index', {
-        title: 'Index'
-    });
-});
+router.get('/', index);
 
-router.get('/destinations', (req, res) => {
-    res.render('destinations', {
-        title: 'Destinations'
-    })
-});
+router.get('/destinations', destinations);
 
-router.get('/opinions', (req, res) => {
-    res.render('opinions', {
-        title: 'Opinions'
-    })
-});
+router.get('/opinions', opinions);
 
-router.get('/about-us', (req, res) => {
-    res.render('about-us', {
-        title: 'About Us'
-    });
-});
+router.get('/about-us', aboutUs);
 
-router.get('/contact', (req, res) => {
-    res.json('Contact')
-});
+router.get('/contact', contact);
 
 export default router;
