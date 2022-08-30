@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/albertost5/express-mvc-app.git"
   },
+  "type": "module",
   "author": "Alberto S",
   "license": "ISC",
   "bugs": {
@@ -19,7 +20,8 @@
   "homepage": "https://github.com/albertost5/express-mvc-app#readme",
   "dependencies": {
     "dotenv": "^16.0.1",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
