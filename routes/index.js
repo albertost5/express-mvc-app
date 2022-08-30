@@ -6,8 +6,12 @@ router.get('/', (req, res) => {
     res.render('index');
 });
 
-router.post('/', (req, res) => {
-    res.json(req.body);
+router.get('/destinations', (req, res) => {
+    res.render('destinations')
+});
+
+router.get('/opinions', (req, res) => {
+    res.render('opinions')
 });
 
 router.get('/about-us', (req, res) => {
