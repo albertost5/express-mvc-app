@@ -1,4 +1,29 @@
 extends ./layout/base
 
 block content 
-    h2 About Us
+    main.container.mt-5
+        .row
+            .col-md-5
+                img(src="img/about_us.jpg", alt="About Us", class="img-fluid")
+            .col-md-7
+                h1 #{title}
+                
+                blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan mi id nulla semper laoreet. Sed et semper tortor. Morbi in nisi a lorem euismod accumsan. Nam a molestie lorem. Vivamus ac pretium nibh. Aenean nisl risus, volutpat et mollis eu, pulvinar id nulla. Quisque a vestibulum metus. Aliquam finibus lobortis purus. Mauris blandit bibendum consequat. Vivamus sed erat at ligula consequat finibus.
+                p Mauris sed risus erat. Ut facilisis pretium sem, eu fermentum lorem ornare ut. Etiam at semper nisi. Fusce condimentum malesuada semper. Suspendisse a sapien volutpat turpis vulputate semper. Phasellus arcu est, lacinia ut luctus a, cursus aliquet turpis. Vivamus facilisis elementum lacinia. Praesent et semper neque, id ornare tortor. Sed ut quam sed est consectetur mattis.
+                p Phasellus pretium quam vitae magna vestibulum rhoncus elementum efficitur dui. Vivamus venenatis posuere mollis. Pellentesque feugiat quis nibh non pulvinar. Vestibulum tempus eros sit amet lorem molestie, id tincidunt est eleifend. In sit amet tellus vulputate, sollicitudin eros sit amet, ultricies tellus. Nam sodales in elit congue suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+        .icons-list
+            .container.mt-5.py-5.text-center 
+                .row 
+                    .col-md-4
+                        img(src="img/security.svg", alt="Security Icon", class="img-fluid mb-4")
+                        h2 Security 
+                        p Mauris sed risus erat. Ut facilisis pretium sem, eu fermentum lorem ornare ut. Etiam at semper nisi. Fusce condimentum malesuada semper. Suspendisse a sapien volutpat turpis vulputate semper. Phasellus arcu est, lacinia ut luctus a, cursus aliquet turpis.
+                    .col-md-4
+                        img(src="img/destinations.svg", alt="Destinations Icon", class="img-fluid mb-4")
+                        h2 Destinations 
+                        p Mauris sed risus erat. Ut facilisis pretium sem, eu fermentum lorem ornare ut. Etiam at semper nisi. Fusce condimentum malesuada semper. Suspendisse a sapien volutpat turpis vulputate semper. Phasellus arcu est, lacinia ut luctus a, cursus aliquet turpis.
+                    .col-md-4
+                        img(src="img/prices.svg", alt="Prices Icon", class="img-fluid mb-4")
+                        h2 Prices 
+                        p Mauris sed risus erat. Ut facilisis pretium sem, eu fermentum lorem ornare ut. Etiam at semper nisi. Fusce condimentum malesuada semper. Suspendisse a sapien volutpat turpis vulputate semper. Phasellus arcu est, lacinia ut luctus a, cursus aliquet turpis.

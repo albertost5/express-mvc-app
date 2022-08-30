@@ -14,6 +14,7 @@ app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use( (req, res, next) => {
     res.locals.currentYear = new Date().getFullYear();
+    res.locals.webTitle = 'Travel Agency App - JS'
     return next();
 });
 
