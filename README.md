@@ -13,4 +13,6 @@ A Travel Agency App built using NodeJS, Express, Sequealize, Pug and BootStrap.
 
 4. Add database (MySQL) and Destinations section. 
 
+5. Add endpoint to get a single travel.
+
 

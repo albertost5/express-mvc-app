@@ -22,6 +22,28 @@ const destinations = async(req, res) => {
     });
 }
 
+const destinationDetail = async(req, res) => {
+    const { country } = req.params;
+    let travel; 
+
+    if( !country ) {
+        console.log('There was not a country as param..');
+        return;
+    }
+    
+    try {
+        travel = await Travel.findOne({ where: { image: country } });
+    } catch (error) {
+        console.log(`Error retrieving the information of ${country}: `, error);
+        return;
+    }
+
+    res.render('travel', {
+        title: travel.title,
+        travel
+    });
+}
+
 const aboutUs = (req, res) => {
     res.render('about-us', {
         title: 'About Us'
@@ -44,5 +66,6 @@ export {
     destinations,
     aboutUs,
     contact,
-    opinions
+    opinions,
+    destinationDetail
 }
