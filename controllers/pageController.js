@@ -1,9 +1,23 @@
 import { Opinion } from '../models/Opinion.js';
 import { Travel } from '../models/Travel.js';
 
-const index = (req, res) => {
+const index = async(req, res) => {
+    let travels;
+    let opinions;
+    // Get 3 travels
+    try {
+        travels = await Travel.findAll({ limit: 3});
+        opinions = await Opinion.findAll({ limit: 3});
+    } catch (error) {
+        console.log('Error retrieving the data: ', error);
+        return;
+    }
+
     res.render('index', {
-        title: 'Index'
+        title: 'Index',
+        class: 'home',
+        travels,
+        opinions
     });
 }
 

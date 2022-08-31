@@ -1,6 +1,33 @@
 extends ./layout/base
 
+block slider
+    .slider 
+        h1 RIO DE JANEIRO 
+        em adventure
+        
+
 block content 
     main.container.mt-5
-        .row 
-            h1 #{title}
+        h2.text-center.mb-5 About Us 
+        .row.mb-5
+            .col-md-6 
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget nibh id neque auctor facilisis. Donec tristique, nulla bibendum laoreet sodales, tortor purus dignissim orci, id luctus leo est sit amet enim. Fusce tristique pharetra nunc, ac fringilla massa accumsan at. Ut eget ligula nisl. Cras scelerisque vel ante sit amet dignissim. Nunc feugiat sapien mauris, et congue mi luctus ac. Morbi ac risus eget sapien scelerisque consectetur eget a mi. Praesent in sagittis sapien, id sollicitudin ligula.
+                p In et neque dui. Fusce aliquam ullamcorper velit eget vestibulum. Donec tempor at arcu at porta. Proin consectetur ligula ut congue fringilla. Pellentesque ac consequat lorem.
+            .col-md-6
+                img(src="/img/home_about_us.jpg", alt="About Us Image", class="img-fluid")
+
+        include ./layout/travels
+
+    .discount 
+        .container 
+            .row 
+                .col-md-6 
+                    .content 
+                        h3 Discount of 5%
+                        p.title Travel to Canada 
+                        p.date 20 March 2022 // 28 March 2022
+                        p.price $2.5000 USD
+    
+    .container 
+        h2.mt-5.text-center Opinions 
+        include ./layout/opinions
