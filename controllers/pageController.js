@@ -1,3 +1,4 @@
+import { Opinion } from '../models/Opinion.js';
 import { Travel } from '../models/Travel.js';
 
 const index = (req, res) => {
@@ -54,12 +55,19 @@ const contact =  (req, res) => {
     res.json('Contact')
 }
 
-const opinions = (req, res) => {
-    res.render('opinions', {
-        title: 'Opinions'
-    })
+const opinions = async(req, res) => {
+    try {
+        const opinions = await Opinion.findAll();
+        
+        res.render('opinions', {
+            title: 'Opinions',
+            opinions
+        });
+    } catch (error) {
+        console.log('Error retrieving all the opinions: ', error);
+        return;
+    }
 }
-
 
 export { 
     index,
